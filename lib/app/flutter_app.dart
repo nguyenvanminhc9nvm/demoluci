@@ -1,10 +1,11 @@
 import 'package:base_flutter_project/app/app_bindings.dart';
 import 'package:base_flutter_project/configurations/environments.dart';
-import 'package:base_flutter_project/languages/translation_service.dart';
+import 'package:base_flutter_project/languages/language.dart';
 import 'package:base_flutter_project/routes/routes.dart';
 import 'package:base_flutter_project/services/app_lifecycle_observer.dart';
 import 'package:base_flutter_project/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
 class FlutterApp extends StatefulWidget {
@@ -26,9 +27,13 @@ class FlutterAppState extends State<FlutterApp> {
       initialRoute: RouteName.splash,
       initialBinding: AppBinding(),
       enableLog: true,
-      translations: TranslationService(),
-      locale: TranslationService.locale,
-      fallbackLocale: TranslationService.fallbackLocale,
+      localizationsDelegates: [
+        L.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: L.delegate.supportedLocales,
     );
   }
 

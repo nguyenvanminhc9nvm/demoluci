@@ -13,5 +13,5 @@ void mainApp(EnvironmentType environment) async {
   // FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   // NotificationService().initialize();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  initializeDateFormatting().then((_) => runApp(FlutterApp()));
+  initializeDateFormatting().then((_) => runApp(FlutterApp(environment: environment,)));
 }
