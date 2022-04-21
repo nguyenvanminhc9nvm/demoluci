@@ -1,6 +1,7 @@
-import 'package:base_flutter_project/languages/labels.dart';
+import 'package:base_flutter_project/languages/language.dart';
 import 'package:base_flutter_project/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class FlutterBottomBar extends StatelessWidget {
   final Function? onHomeClick;
@@ -28,11 +29,11 @@ class FlutterBottomBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _buildItemBottomBar(icon: Icons.home, label: Label.home.tr, onTap: onHomeClick),
-          _buildItemBottomBar(icon: Icons.miscellaneous_services, label: Label.service.tr, onTap: onServiceClick),
-          _buildItemBottomBar(icon: Icons.videogame_asset, label: Label.game.tr, onTap: onGameClick),
-          _buildItemBottomBar(icon: Icons.currency_exchange, label: Label.gold.tr, onTap: onGoldClick),
-          _buildItemBottomBar(icon: Icons.person, label: Label.profile.tr, onTap: onProfileClick),
+          _buildItemBottomBar(icon: Icons.home, label: L.current.home.tr, onTap: onHomeClick),
+          _buildItemBottomBar(icon: Icons.miscellaneous_services, label: L.current.service.tr, onTap: onServiceClick),
+          _buildItemBottomBar(icon: Icons.videogame_asset, label: L.current.game.tr, onTap: onGameClick),
+          _buildItemBottomBar(icon: Icons.currency_exchange, label: L.current.gold.tr, onTap: onGoldClick),
+          _buildItemBottomBar(icon: Icons.person, label: L.current.profile.tr, onTap: onProfileClick),
         ],
       ),
     );
