@@ -73,7 +73,7 @@ class _MainScreenState extends State<MainScreen> {
             flex: 10,
             child: Navigator(
               key: rootNavigator,
-              initialRoute: RouteName.listEmployee,
+              initialRoute: RouteName.employeeDetails,
               onGenerateRoute: AppRoutes.generateRoute,
             ),
           )

@@ -44,8 +44,7 @@ class _EmployeeScreenState extends State<EmployeeScreen> {
   Widget _buildItemInformationEmployee(Employee employee) {
     return Container(
       color: AppColors.azure,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
           Padding(
             padding: EdgeInsets.only(left: 20.dp, top: 20.dp),
