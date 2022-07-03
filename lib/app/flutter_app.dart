@@ -40,7 +40,7 @@ class FlutterAppState extends State<FlutterApp> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addObserver(AppLifecycleObserver());
+    WidgetsBinding.instance.addObserver(AppLifecycleObserver());
     print('start app lifecycle observer');
 
     AppLifecycleObserver().status.listen((AppLifecycleState state) {
@@ -50,7 +50,7 @@ class FlutterAppState extends State<FlutterApp> {
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(AppLifecycleObserver());
+    WidgetsBinding.instance.removeObserver(AppLifecycleObserver());
     print('finish app lifecycle observer');
     super.dispose();
   }

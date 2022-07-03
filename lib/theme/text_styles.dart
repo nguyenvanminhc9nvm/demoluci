@@ -90,46 +90,62 @@ class AppTextStyle {
   }
 
   static TextStyle t10w400([Color? color, double? height]) {
-    return common(10, FontWeight.w400, color, null, height);
+    return common(10.dp, FontWeight.w400, color, null, height);
   }
 
   static TextStyle t12w400([Color? color, double? height]) {
-    return common(12, FontWeight.w400, color, null, height);
+    return common(12.dp, FontWeight.w400, color, null, height);
   }
 
   static TextStyle t12w500([Color? color, double? height]) {
-    return common(12, FontWeight.w500, color, null, height);
+    return common(12.dp, FontWeight.w500, color, null, height);
   }
 
   static TextStyle t12w700([Color? color, double? height]) {
-    return common(12, FontWeight.w700, color, null, height);
+    return common(12.dp, FontWeight.w700, color, null, height);
   }
 
   static TextStyle t14w400([Color? color, double? height]) {
-    return common(14, FontWeight.w400, color, null, height);
+    return common(14.dp, FontWeight.w400, color, null, height);
   }
 
   static TextStyle t14w500([Color? color, double? height]) {
-    return common(14, FontWeight.w500, color, null, height);
+    return common(14.dp, FontWeight.w500, color, null, height);
   }
 
   static TextStyle t14w700([Color? color, double? height]) {
-    return common(14, FontWeight.w700, color, null, height);
+    return common(14.dp, FontWeight.w700, color, null, height);
   }
 
   static TextStyle t16w400([Color? color, double? height]) {
-    return common(16, FontWeight.w400, color, null, height);
+    return common(16.dp, FontWeight.w400, color, null, height);
   }
 
   static TextStyle t16w500([Color? color, double? height]) {
-    return common(16, FontWeight.w500, color, null, height);
+    return common(16.dp, FontWeight.w500, color, null, height);
   }
 
   static TextStyle t16w700([Color? color, double? height]) {
-    return common(16, FontWeight.w700, color, null, height);
+    return common(16.dp, FontWeight.w700, color, null, height);
+  }
+
+  static TextStyle t18w400([Color? color, double? height]) {
+    return common(18.dp, FontWeight.w400, color, null, height);
   }
 
   static TextStyle t18w700([Color? color, double? height]) {
-    return common(18, FontWeight.w700, color, null, height);
+    return common(18.dp, FontWeight.w700, color, null, height);
+  }
+
+  static TextStyle t20w700([Color? color, double? height]) {
+    return common(20.dp, FontWeight.w700, color, null, height);
+  }
+
+  static TextStyle t22w700([Color? color, double? height]) {
+    return common(22.dp, FontWeight.w700, color, null, height);
+  }
+
+  static TextStyle t24w700([Color? color, double? height]) {
+    return common(24.dp, FontWeight.w700, color, null, height);
   }
 }

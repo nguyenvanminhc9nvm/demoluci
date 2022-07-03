@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 /// Auto resize based in designed screen viewport.
 /// This project is [W: 375 pixel, H: 812 pixel] - iphoneX
 class Dimens {
-  static const _defaultScreenWidth = 375.0;
-  static const _defaultScreenHeight = 812.0;
+  static const _defaultScreenWidth = 1023.0;
+  static const _defaultScreenHeight = 818.0;
   static double _ratio = 0.0;
 
   static double get _getRatio {

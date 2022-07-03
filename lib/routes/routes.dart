@@ -1,36 +1,31 @@
-import 'package:base_flutter_project/screens/root/binding/root_binding.dart';
-import 'package:base_flutter_project/screens/root/root_screen.dart';
-import 'package:base_flutter_project/screens/splash/bindings/splash_binding.dart';
-import 'package:base_flutter_project/screens/splash/splash_screen.dart';
+import 'package:base_flutter_project/screens/list_employee/list_employee_screen.dart';
+import 'package:base_flutter_project/screens/manager_employee/employee_screen.dart';
+import 'package:base_flutter_project/screens/splash/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RouteName {
   static const String splash = "/splash";
-  static const String root = "/root";
-  static const String home = "/home";
+  static const String listEmployee = "list_employee";
+  static const String employeeDetails = "/employee_details";
 }
 
 class AppRoutes {
   static final screens = <String, Widget Function()>{
-    RouteName.splash: () => SplashScreen(),
-    RouteName.root: () => const RootScreen(),
-  };
-
-  static final bindings = <String, List<Bindings> Function()>{
-    RouteName.splash: () => [SplashBinding()],
-    RouteName.root: () => [RootBinding()],
+    RouteName.splash: () => const MainScreen(),
+    RouteName.listEmployee: () => const ListEmployeeScreen(),
+    RouteName.employeeDetails: () => const EmployeeScreen(),
   };
 
   static Route<Widget> generateRoute(RouteSettings settings) {
     return GetPageRoute(
       settings: settings,
       page: screens[settings.name] ?? getDefaultScreen,
-      bindings: bindings[settings.name]?.call(),
     );
   }
 
   static Widget getDefaultScreen() => const Scaffold(
+    backgroundColor: Colors.white,
         body: Center(child: Text('Undefined')),
       );
 }
